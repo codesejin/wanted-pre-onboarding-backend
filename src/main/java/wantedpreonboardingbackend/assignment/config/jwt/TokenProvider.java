@@ -11,7 +11,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import wantedpreonboardingbackend.assignment.domain.Member;
 import wantedpreonboardingbackend.assignment.service.UserDetailsImpl;
 import wantedpreonboardingbackend.assignment.service.UserDetailsServiceImpl;
@@ -31,11 +30,9 @@ public class TokenProvider {
 
 
    public TokenProvider(@Value("${jwt.secret}") String secretKey, UserDetailsServiceImpl userDetailsService) {
-   // public TokenProvider(UserDetailsServiceImpl userDetailsService) {
         this.userDetailsService = userDetailsService;
         byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         this.key = Keys.hmacShaKeyFor(keyBytes);
-       // this.key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     }
 
     public String generateTokenDto(Member member) {
