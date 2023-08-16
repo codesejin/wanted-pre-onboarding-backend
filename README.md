@@ -4,13 +4,25 @@
 
 ## 박세진
 ### 애플리케이션의 실행 방법
-[Postman API 명세 링크](https://documenter.getpostman.com/view/19993324/2s9Y5R1Rh2#intro)
+
+
+1. Java Development Kit (JDK) 17 이상 설치
+2. Git 설치 (옵션)
+```
+   git clone https://github.com/codesejin/wanted-pre-onboarding-backend.git
+   cd assignment
+```
+3. application.properties에서 mysql 설정을 로컬 호스트상에서 사용 가능한 변수로 수정
+4. 실행한 뒤 postman으로 api 테스트
+
 
 ### 데이터베이스 테이블 구조
 ![image](https://github.com/codesejin/wanted-pre-onboarding-backend/assets/101460733/cbd05555-dc5e-4dc2-a6c0-f283ac1b8ff7)
 
 
 ### 구현한 API의 동작을 촬영한 데모 영상 링크
+[데모 영상 링크](https://youtu.be/cfRX7s6VsXA)
+
 
 ### 구현 방법 및 이유에 대한 간략한 설명
 - Java & Spring, Spring Boot, JPA, MySQL을 이용해서 백엔드 서버 및 DB 구현
