@@ -5,7 +5,8 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class ErrorMessages {
-
+    public static final String UNAUTHORIZED = "UNAUTHORIZED";
+    public static final String NOT_FOUND_BOARD = "NOT_FOUND_BOARD";
     public static final String REQUIRE_AUTHORITY = "REQUIRE_AUTHORITY";
     public static final String BAD_TOKEN = "BAD_TOKEN";
     public static final String NOT_FOUND_USER = "NOT_FOUND_USER";

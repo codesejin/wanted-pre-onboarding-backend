@@ -1,14 +1,12 @@
 package wantedpreonboardingbackend.assignment.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import wantedpreonboardingbackend.assignment.util.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
