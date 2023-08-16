@@ -7,6 +7,7 @@
 
 
 ### 데이터베이스 테이블 구조
+![image](https://github.com/codesejin/wanted-pre-onboarding-backend/assets/101460733/cbd05555-dc5e-4dc2-a6c0-f283ac1b8ff7)
 
 
 ### 구현한 API의 동작을 촬영한 데모 영상 링크
