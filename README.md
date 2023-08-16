@@ -3,8 +3,8 @@
 
 
 ## 박세진
-### 애플리케이션의 실행 방법 및 API 명세(request/response 포함)
-
+### 애플리케이션의 실행 방법
+[Postman API 명세 링크](https://documenter.getpostman.com/view/19993324/2s9Y5R1Rh2#intro)
 
 ### 데이터베이스 테이블 구조
 ![image](https://github.com/codesejin/wanted-pre-onboarding-backend/assets/101460733/cbd05555-dc5e-4dc2-a6c0-f283ac1b8ff7)
@@ -14,6 +14,12 @@
 
 ### 구현 방법 및 이유에 대한 간략한 설명
 - Java & Spring, Spring Boot, JPA, MySQL을 이용해서 백엔드 서버 및 DB 구현
-- Spring Security와 Jwt를 이용해서 이용자의 인증 및 인가 구현
-- 회원가입 시 Spring Security를 이용해서 pw를 암호화 후 저장
-- 나머지 사항은 API 요구 사항에 맞게 구현.
+- Spring Security와 Jwt를 이용해서 사용자의 인증 및 인가 구현
+- 회원가입 시 Spring Security를 이용해서 pw를 암호화 후 DB 저장
+- 로그인 시 jwt토큰 생성 후 response 헤더에 Authorization 키값으로 반환
+- 나머지 API는 CRUD로 구현했고, 특정 사용자만이 할 수 있는 곳에서는 request 헤더에 토큰 필요
+
+### API 명세(request/response 포함)
+[Postman API 명세 링크](https://documenter.getpostman.com/view/19993324/2s9Y5R1Rh2#intro)
+![image](https://github.com/codesejin/wanted-pre-onboarding-backend/assets/101460733/cd687b55-65e4-4c61-b051-e999275ad9fd)
+
