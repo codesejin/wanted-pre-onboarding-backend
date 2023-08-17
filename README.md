@@ -2,7 +2,7 @@
 원티드 프리온보딩 인턴쉽 선발 과제(wanted-pre-onboarding-backend)
 
 
-## 박세진
+## 지원자 성명 : 박세진
 ### 애플리케이션의 실행 방법
 
 
@@ -47,7 +47,22 @@ spring.mvc.pathmatch.matching-strategy=ant_path_matcher
 - Spring Security와 Jwt를 이용해서 사용자의 인증 및 인가 구현
 - 회원가입 시 Spring Security를 이용해서 pw를 암호화 후 DB 저장
 - 로그인 시 jwt토큰 생성 후 response 헤더에 Authorization 키값으로 반환
+  - 로그인 API 포스트맨 테스트 시 'Tests'탭에 토큰을 글로벌 환경변수로 설정
+  ``` 
+   var token = responseHeaders["Authorization"];
+   if (token && token.startsWith("Bearer ")) {
+       token = token.slice(7); // "Bearer " 부분 제거
+       pm.globals.set("token", token);
+   }
+   ```
+  ![image](https://github.com/codesejin/wanted-pre-onboarding-backend/assets/101460733/e7fdfc4b-2a55-4048-b3bb-267045178f85)
+
+
 - 나머지 API는 CRUD로 구현했고, 특정 사용자만이 할 수 있는 곳에서는 request 헤더에 토큰 필요
+   - Auth탭 > Bearer Token 타입 > `{{token}}`입력
+   - ![image](https://github.com/codesejin/wanted-pre-onboarding-backend/assets/101460733/f750bdfa-a10e-4d27-bb02-c98bd94128aa)
+
+
 
 ### API 명세(request/response 포함)
 [Postman API 명세 링크](https://documenter.getpostman.com/view/19993324/2s9Y5R1Rh2#intro)
