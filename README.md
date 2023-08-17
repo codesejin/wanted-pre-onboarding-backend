@@ -12,8 +12,26 @@
    git clone https://github.com/codesejin/wanted-pre-onboarding-backend.git
    cd assignment
 ```
-3. application.properties에서 mysql 설정을 로컬 호스트상에서 사용 가능한 변수로 수정
-4. 실행한 뒤 postman으로 api 테스트
+3. `/src/main/resources`로 이동
+3. application.properties에서 mysql 설정을 자신의 로컬 호스트상에서 root변수로 수정
+```
+server.port=8081
+jwt.secret=mySuperSecretKey123ThisIsAStrongerSecretKeyWithMoreCharacters
+# API URL PREFIX
+api-version=v1
+api-prefix=/api/${api-version}
+# DataSource
+spring.datasource.url=jdbc:mysql://localhost:3306/wanted?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+spring.datasource.username=[root계정]
+spring.datasource.password=[root비밀번호]
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+
+# SWAGGER
+spring.mvc.pathmatch.matching-strategy=ant_path_matcher
+```
+5. 실행한 뒤 postman으로 api 테스트
 
 
 ### 데이터베이스 테이블 구조
